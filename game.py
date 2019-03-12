@@ -21,7 +21,9 @@ class Game():
         for question in range(10):
             num1 = random.randint(1,10)
             num2 = random.randint(1,10)
+            print("*" * 20, "\n")
             user_answer = int(input("What is {} + {}?\n".format(num1, num2)))
+            print("*" * 20, "\n")
             correct_answer = num1 + num2
             if user_answer == correct_answer:
                 print("Correct!\n")
