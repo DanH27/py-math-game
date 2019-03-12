@@ -9,7 +9,7 @@ class Game():
 
     def ask_question(self):
         if self.difficulty == 1:
-            pass
+            self.easy_questions()
         elif self.difficulty == 2:
             pass
         else:
@@ -28,9 +28,11 @@ class Game():
             if user_answer == correct_answer:
                 print("Correct!\n")
                 self.score += 1
+
             else:
                 print("Wrong Answer! Correct answer is {}\n".format(correct_answer))
-                self.score -= 1
+
+        print("Your score is: {}/10, you got {}% correct!".format(self.score, self.score / 10 * 100))
 
 
 
@@ -38,4 +40,4 @@ class Game():
 #Test
 game_test = Game(1)
 
-game_test.easy_questions()
+game_test.ask_question()
